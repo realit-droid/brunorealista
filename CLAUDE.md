@@ -18,7 +18,7 @@ abaixo, à medida que o projeto evolui. -->
 Página pessoal (`brunorealista.com`) com várias secções:
 
 - **Ator** — referências/portefólio como ator.
-- **Fotografia** — portefólio de fotografia.
+- **Fotógrafo** — portefólio de fotografia.
 - **Programador** — inclui uma secção de **Projetos**, onde entra um cartão/link
   para o [Realista Investimentos](../realista-investimentos) (ferramenta de
   análise de negócios imobiliários) — visível publicamente como divulgação,

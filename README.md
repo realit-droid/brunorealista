@@ -1,6 +1,6 @@
 # brunorealista
 
-Página pessoal de Bruno Realista — portefólio com secções de Ator, Fotografia e Programador (Projetos).
+Página pessoal de Bruno Realista — portefólio com secções de Ator, Fotógrafo e Programador (Projetos).
 
 ## Como começar
 
