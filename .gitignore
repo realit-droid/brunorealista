@@ -1,0 +1,22 @@
+# Segredos e variáveis de ambiente — NUNCA subir para o Git
+.env
+.env.local
+.env.*.local
+
+# Dependências (instaladas automaticamente, não precisam de ir para o Git)
+node_modules/
+
+# Ficheiros do sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ficheiros de build/compilação
+dist/
+build/
+
+# Logs
+*.log
+
+# Ficheiros do editor
+.vscode/*
+!.vscode/extensions.json
