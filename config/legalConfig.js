@@ -12,6 +12,8 @@ const overrides = {
   flags: {
     politicaCookies: false,
     bannerCookies: false,
+    badgeEstado: true,
+    versao: true,
   },
 };
 
