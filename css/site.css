@@ -1,0 +1,304 @@
+/* Estilos partilhados por todas as páginas do site: base, footer, popup de
+   contactos, banner de cookies, acessibilidade (skip-link, foco visível) e
+   responsividade (reset + media query mobile no fim do ficheiro).
+   Adaptado ao tema escuro do site (ver css/style.css). */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  flex: 1;
+}
+
+/* Acessibilidade */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #f5f5f5;
+  color: #111;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #1a6fe0;
+  outline-offset: 2px;
+}
+
+/* Footer partilhado */
+
+.site-footer {
+  border-top: 1px solid #2a2a2a;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer-meta-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-link,
+.footer-social-link {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-social-link:hover {
+  color: #f5f5f5;
+  text-decoration: underline;
+}
+
+.footer-badge {
+  display: inline-block;
+  background-color: #444;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+  margin-left: 0.4rem;
+}
+
+.footer-contacto-btn {
+  font: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Popup de contactos */
+
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.contact-modal-overlay[hidden] {
+  display: none;
+}
+
+.contact-modal {
+  position: relative;
+  background: #1a1a1a;
+  color: #f5f5f5;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.contact-modal h2 {
+  margin-top: 0;
+}
+
+.contact-modal a {
+  color: #f5f5f5;
+}
+
+.contact-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.contact-modal-close:hover {
+  color: #f5f5f5;
+}
+
+/* Banner de cookies */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  z-index: 50;
+  border-top: 1px solid #2a2a2a;
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner-text {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.cookie-banner-text a {
+  color: #fff;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.cookie-banner-btn {
+  border: 1px solid #fff;
+  background: none;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.cookie-banner-accept {
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* Páginas de texto corrido (legal, FAQ, ficha técnica, mapa do site) */
+
+.prose {
+  text-align: left;
+  max-width: 720px;
+  margin: 0 auto;
+  color: #ccc;
+}
+
+.prose h1 {
+  margin-top: 0;
+  color: #f5f5f5;
+}
+
+.prose h2 {
+  margin-top: 2.5rem;
+  font-size: 1.15rem;
+  color: #f5f5f5;
+}
+
+.prose p,
+.prose li {
+  line-height: 1.6;
+}
+
+.prose ul {
+  padding-left: 1.25rem;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid #2a2a2a;
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.prose blockquote {
+  border-left: 4px solid #e08a1e;
+  background: #1a1a1a;
+  color: #ccc;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.prose .updated {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.prose dt {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  color: #f5f5f5;
+}
+
+.prose dd {
+  margin-left: 0;
+  line-height: 1.6;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .prose table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-meta-right {
+    flex-direction: column;
+  }
+}
