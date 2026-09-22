@@ -47,7 +47,7 @@ button:focus-visible {
 
 .site-footer {
   border-top: 1px solid #2a2a2a;
-  padding: 1.5rem;
+  padding: 2.5rem 1.5rem;
   font-size: 0.85rem;
   color: #aaa;
 }
@@ -57,7 +57,8 @@ button:focus-visible {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
 }
 
 .footer-bottom {
@@ -66,7 +67,7 @@ button:focus-visible {
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  max-width: 960px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
