@@ -16,23 +16,20 @@
 <body>
   <a class="skip-link" href="#main-content">Saltar para o conteúdo</a>
 
-  <header>
-    <nav>
-      <a href="/" class="logo">Bruno Realista</a>
-      <ul>
-        <li><a href="/ator/">Ator</a></li>
-        <li><a href="/fotografo/">Fotógrafo</a></li>
-        <li><a href="/programador/">Programador</a></li>
-      </ul>
-    </nav>
+  <header class="header-simple">
+    <a href="/" class="logo">Bruno Realista</a>
   </header>
 
   <main id="main-content">
     <section class="hero">
-      <img src="img/hero/retrato.jpg" alt="Bruno Realista" class="hero-image">
+      <div class="hero-photo-wrap">
+        <img src="img/hero/retrato.jpg" alt="Bruno Realista" class="hero-image">
+        <a href="/ator/" class="hero-bubble hero-bubble-ator">Ator</a>
+        <a href="/fotografo/" class="hero-bubble hero-bubble-fotografo">Fotógrafo</a>
+        <a href="/programador/" class="hero-bubble hero-bubble-programador">Programador</a>
+      </div>
       <div class="hero-text">
         <h1>Bruno Realista</h1>
-        <p>Ator · Fotógrafo · Programador</p>
       </div>
     </section>
 
