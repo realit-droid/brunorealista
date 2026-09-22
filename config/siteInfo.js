@@ -5,6 +5,6 @@
 // Para atualizar o estado: node scripts/generate-site-info.js
 
 export const siteInfo = {
-  versao: "0.3.1",
+  versao: "0.3.2",
   estado: "Em Desenvolvimento",
 };

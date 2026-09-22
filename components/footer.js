@@ -28,7 +28,10 @@ export function renderFooter(config) {
     .filter(([flag]) => flags[flag])
     .map(([, { label, href }]) => `<a class="footer-link" href="${href}">${label}</a>`)
     .join("");
-  const linksRow = linkItems ? `<div class="footer-links">${linkItems}</div>` : "";
+  const contactoLink = flags.contactos
+    ? `<button class="footer-link footer-contacto-btn" type="button" id="footer-contacto-btn">Contactos</button>`
+    : "";
+  const linksRow = (linkItems || contactoLink) ? `<div class="footer-links">${linkItems}${contactoLink}</div>` : "";
 
   const redesAtivas = (siteConfig.redesSociais ?? []).filter((rede) => rede.href);
   const socialRow = flags.redesSociais && redesAtivas.length
@@ -38,9 +41,6 @@ export function renderFooter(config) {
     : "";
 
   const copyrightText = flags.copyright ? `© ${new Date().getFullYear()} ${siteConfig.nome}` : "";
-  const contactoLink = flags.contactos
-    ? `<button class="footer-link footer-contacto-btn" type="button" id="footer-contacto-btn">Contactos</button>`
-    : "";
 
   const versionBadge = flags.versao
     ? `<span class="footer-badge">v${siteInfo.versao}</span>`
@@ -56,7 +56,7 @@ export function renderFooter(config) {
       ${linksRow}
       <div class="footer-bottom">
         <span class="footer-meta">${copyrightText} ${versionBadge} ${estadoBadge}</span>
-        <span class="footer-meta-right">${contactoLink}${socialRow}</span>
+        ${socialRow}
       </div>
     </footer>
   `.trim();
